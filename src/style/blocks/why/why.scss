@@ -1,0 +1,166 @@
+.why{
+    background-color: #ffffff;
+
+    min-height: (40.75rem);
+    // height: 100vh;
+    height: 100%;
+
+    display: flex;
+
+    // @include tablets{
+    //     min-height: (62.5rem);
+    // }
+
+    // @include phones{
+    //     min-height: (44.1875rem);
+    // }
+}
+
+.why__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-top: (6.6875rem);
+    padding-bottom: (7.125rem);
+    background-color: #ffffff;
+}
+
+.why-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.why-text__title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: (3rem);
+    text-transform: uppercase;
+    text-align: center;
+
+    @include phones{
+        margin: 0;
+        font-size: (2.5rem);
+    }
+}
+.why-text__subtitle{
+    font-style: normal;
+    font-weight: 400;
+    font-size: (1.125rem);
+
+    @include phones{
+        margin: (0.5625rem) 0 0 0;
+    }
+}
+
+.why-benefit__list{
+    display: flex;
+    margin-top: (3.0625rem);
+
+    @include phones{
+        flex-direction: column;
+
+    }
+}
+
+.why-benefit__items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: (3.3125rem);
+    text-align: center;
+    position: relative;
+
+    @include phones{
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+    }
+}
+
+.why-benefit__items::before{
+    content: url(../img/why/points.png);
+    position: absolute;
+    top: (3.125rem);
+    left: (-3.75rem);
+
+    @include tablets{
+        content: "";
+    }
+
+    @include phones{
+        content: "";
+    }
+}
+.why-benefit__items:first-child::before{
+    content: none;
+}
+.why-benefit__items:first-child{
+    margin-left: 0;
+}
+
+.why-benefit__img{
+    width: (8rem);
+    height: (8rem);
+    border-radius: 50%;
+    background-color: #F2F5F4;
+    overflow: hidden;
+    margin-bottom: 1.25rem;
+
+    @include phones{
+        min-width: (8rem);
+        min-height: (8rem);
+    }
+}
+.why-benefit__img--perfect{
+    padding: (1.875rem) (2.625rem) (1.875rem) (2.625rem);
+
+    @include phones{
+        margin-bottom: (1.9375rem);
+    }
+}
+.why-benefit__img--strong{
+    padding: (2rem) (2rem) (2rem) (2rem);
+
+    @include phones{
+        margin-bottom: (1.9375rem);
+    }
+}
+.why-benefit__img--unique{
+    padding: (1.875rem) (1.875rem);
+
+    @include phones{
+        margin-bottom: 0;
+    }
+}
+
+.why-benefit__text{
+    @include phones{
+        display: flex;
+        flex-direction: column;
+
+        text-align: left;
+        margin-left: (0.75rem);
+    }
+}
+
+.why-benefit__item--title{
+    color: #292929;
+    font-style: normal;
+    font-weight: 700;
+    font-size: (1.6875rem);
+    margin: 0 0 (1.25rem) 0;
+
+    @include phones{
+        margin-bottom: (0.5625rem);
+    }
+}
+.why-benefit__item--text{
+    color: #666666;
+    font-style: normal;
+    font-weight: 300;
+    font-size: (1.125rem);
+    margin: 0;
+}

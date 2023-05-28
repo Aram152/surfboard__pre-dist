@@ -1,0 +1,134 @@
+.team{
+    background: #fff;
+    min-height: (40.75rem);
+    // height: 100vh;
+    height: 100%;
+
+    align-items: center;
+    overflow: hidden;
+
+    @include tablets{
+        // min-height: (62.5rem);
+        // height: 100vh;
+        // height: 100%;
+    }
+}
+
+.team__list--mobile{
+    display: none;
+
+    @include tablets{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.team__container{
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.team__list--desctop{
+    display: flex;
+
+    @include tablets{
+        display: none;
+    }
+}
+
+.team__item{
+    width: (13.75rem);
+
+    margin-left: (1.25rem);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:first-child{
+        margin-left: 0;
+    }
+
+    @include tablets{
+        margin-left: 0;
+
+        width: (13.875rem);
+    }
+}
+
+.team__title{
+    font-weight: 700;
+    font-size: (3rem);
+    margin-bottom: (3.3125rem);
+}
+.team__name{
+    position: relative;
+
+    margin-top: (1.3125rem);
+
+    font-weight: 700;
+    font-size: (1.3125rem);
+
+    border: none;
+    background: none;
+
+    &::after{
+        content: url(../img/team/Polygon.svg);
+        position: absolute;
+        // transform: rotate(180deg);
+        right: (-0.3125rem);
+        top: (-0.0625rem);
+        // bottom: (-0.0625rem);
+    }
+
+    @include tablets{
+        margin-top: 0;
+        margin-bottom: (1rem);
+    }
+}
+.team__name--triangle{
+    
+    &::after{
+        content: url(../img/team/Polygon.svg);
+        position: absolute;
+        transform: rotate(180deg);
+        right: (-0.3125rem);
+        bottom: (-0.0625rem);
+    }
+}
+
+.team__content-title{
+    padding-top: (0.5rem);
+
+    font-weight: 400;
+    font-size: (1.125rem);
+
+    @include tablets{
+        font-weight: 700;
+    }
+}
+.team__content-text{
+    margin-top: (0.25rem);
+
+    font-weight: 300;
+    font-size: (1.125rem);
+
+    @include tablets{
+        padding-bottom: (2rem);
+    }
+}
+
+.team__content{
+    height: 0;
+    overflow: hidden;
+
+    transition: 0.26s;
+
+    &--active{
+        height: 100%;
+    }
+}

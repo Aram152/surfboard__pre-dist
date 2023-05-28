@@ -1,0 +1,229 @@
+.player-section{
+    background: #F8FAF9;
+
+    min-height: (40.75rem);
+    // height: 100vh;
+    height: 100%;
+
+    // @include tablets{
+    //     min-height: (37.875rem);
+    // }
+
+    // @include phones{
+    //     min-height: (31.9375rem);
+    // }
+}
+
+.player__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section__title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: (3rem);
+    text-align: center;
+    margin-bottom: (2.5rem);
+
+    @include tablets{
+        margin-bottom: (2.5rem);
+    }
+
+    @include phones{
+        font-weight: 700;
+        font-size: (2.5rem);
+    }
+}
+
+.player-section__container{
+    margin-top: (1.9375rem);
+
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    max-width: (40rem);
+    margin: 0 auto;
+    height: auto;
+    
+}
+.player{
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+
+    width: 100%;
+    // max-width: (41.375rem);
+
+    // height: (24.5rem);
+    height: auto;
+
+    &.active .player__wrapper .player__splash{
+        display: none;
+    }
+
+    &.paused .player__controls .player__start{
+        width: (0.9375rem);
+        height: (1.25rem);
+        border: (0.3125rem) solid transparent;
+        border-left-color: #F8FAF9;
+        border-right-color: #F8FAF9;
+        border-top-width: 0rem;
+        border-bottom-width: 0rem;
+    }
+
+    @include tablets{
+        max-width: (37.125rem);
+        height: auto;
+    }
+
+    @include phones{
+        max-width: (35.625rem);
+    }
+}
+.player__wrapper{
+    // height: 22.3125rem;
+    height: auto;
+}
+
+.player__splash{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    // height: (24.5rem);
+    height: auto;
+    background: url(../img/player/player.svg) center center/cover no-repeat;
+
+    cursor: pointer;
+
+    &::before{
+        position: absolute;
+        content: url(../img/player/splash_play.png);
+        left: 50%;
+        bottom: 50%;
+        transform: translate(-50%, 35%);
+    }
+
+    @include tablets{
+        max-width: (37.125rem);
+    }
+
+    @include phones{
+        max-width: (35.625rem);
+    }
+}
+.player__controls{
+    position: absolute;
+    bottom: (0.25rem);
+    left: 0rem;
+    right: 0;
+
+    width: 100%;
+    padding-left: (1.0625rem);
+    padding-right: (1.4375rem);
+
+    height: 2.1875rem;
+
+    background: #404040;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include tablets{
+        max-width: (37.125rem);
+    }
+
+    @include phones{
+        max-width: (35.625rem);
+    }
+}
+
+.player__playback{
+    position: relative;
+
+    margin: 0 (0.625rem);
+    width: (27.875rem);
+    height: (0.4375rem);
+    background: #FEDB3F;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+
+    @include tablets{
+        width: (24.9375rem);
+    }
+
+    @include phones{
+        width: (16.5625rem);
+    }
+}
+
+.player__playback-button{
+    position: absolute;
+    
+    width: (0.9375rem);
+    height: (0.9375rem);
+    border-radius: 50%;
+
+    background: #FEDB3F;
+    border: none;
+
+    cursor: pointer;
+}
+.player__start{
+    border: (0.5625rem) solid transparent;
+    width: 0; 
+    height: 0;
+    padding: 0;
+
+    border-left-color: #F8FAF9;
+    border-right-width: 0;
+    background: transparent;
+    border-left-width: (0.6875rem);
+
+    cursor: pointer;
+}
+
+.player__duration{
+    width: auto;
+    display: flex;
+    color: #FFFFFF;
+    user-select: none;
+
+    @include tablets{
+        font-size: (0.6875rem);
+    }
+}
+
+.player__duration-estimate{
+    display: flex;
+    margin-left: (0.625rem);
+
+    @include tablets{
+        margin-left: (0.3125rem);
+    }
+}
+.player__duration-completed{
+    display: flex;
+}
+
+.player__elem{
+
+    @include tablets{
+        width: 100%;
+        height: (17.4375rem);
+    }
+    
+    @include phones{
+        // width: 100%;
+        height: (14.375rem);
+    }
+}
